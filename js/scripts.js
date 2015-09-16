@@ -41,3 +41,16 @@
     + tens[tensPosition] + ones[onesPosition];
 
   }
+
+  $(document).ready(function() {
+   $("form#roman-numeral").submit(function(event) {
+     var number = parseInt($("input#number").val());
+     var result = romanNumeral(number);
+     $(".output").text(result);
+
+     $("#result").show();
+       event.preventDefault();
+
+
+});
+})
